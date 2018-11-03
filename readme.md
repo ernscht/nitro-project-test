@@ -19,6 +19,16 @@ and start in development mode
 npm start
 ```
 
+... or start in production mode (prototype server)
+
+```
+npm run prod
+```
+
+## Usage with docker
+
+For information on how to use Nitro with docker, please refer to [nitro-docker.md](./project/docs/nitro-docker.md) .
+
 ## Nitro
 
 For information on how to use Nitro, please refer to [nitro.md](./project/docs/nitro.md) .
