@@ -27,17 +27,18 @@ apt-get -y install google-chrome-stable
 
 RUN apt-get install -y firefox-esr
 
- # Create app directory
- WORKDIR /app
+# Create app directory
+WORKDIR /app
 
- # Install app dependencies
- # A wildcard is used to ensure both package.json AND package-lock.json are copied
- COPY package*.json ./
- RUN npm install --ignore-optional
+# Install app dependencies
+# A wildcard is used to ensure both package.json AND package-lock.json are copied
+COPY package*.json ./
+COPY .npmrc ./
+RUN npm install --ignore-optional
 
- # Bundle app source
- COPY . .
+# Bundle app source
+COPY . .
 
 # Expose and start server
- EXPOSE 8080 8081 3001
- CMD [ "npm", "start" ]
+EXPOSE 8080 8081 3001
+CMD [ "npm", "start" ]

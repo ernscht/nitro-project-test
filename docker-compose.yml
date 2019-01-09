@@ -3,7 +3,7 @@ version: "3"
 services:
   server:
     build: .
-    container_name: nitro-project-test_server
+    container_name: test-nitro_server
     command: npm run prod
     ports:
     - 8080:8080

@@ -1,6 +1,6 @@
 {
   "generator-nitro": {
-    "name": "test-new-nitro",
+    "name": "test-nitro",
     "templateEngine": "hbs",
     "clientTemplates": true,
     "exampleCode": true,

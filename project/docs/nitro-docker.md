@@ -1,6 +1,8 @@
 # Nitro usage with docker
 
-Of course docker must be installed. You don't need a local setup.
+This feature is currently in experimental status.
+
+Of course docker must be installed.
 
 ## Production mode
 
@@ -27,7 +29,7 @@ and run:
 npm run docker:dev:watch
 ```
 
-if you need a console to the docker image, run:
+If you need a console to the docker image, run:
 
 ```
 npm run docker:dev:console

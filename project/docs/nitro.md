@@ -65,9 +65,9 @@ set PORT=8000 && set PROXY=8001 && npm start
 set PORT=3001 && npm run prod
 ```
 
-### Usage with docker
+### Usage with docker (experimental)
 
-For information on how to use Nitro with docker, please refer to [nitro-docker.md](./nitro-docker.md) .
+For information on how to use Nitro with docker, please refer to [nitro-docker.md](./nitro-docker.md).
 
 ## Configuring
 
@@ -507,4 +507,4 @@ Use or create new scripts in `package.json` to run with npm.
 
 ## Credits
 
-This app was generated with yeoman and the [generator-nitro](https://www.npmjs.com/package/generator-nitro) package (version 4.2.3).
+This app was generated with yeoman and the [generator-nitro](https://www.npmjs.com/package/generator-nitro) package (version 4.3.0).

@@ -3,7 +3,7 @@ version: "3"
 services:
   server:
     build: .
-    container_name: nitro-project-test_server-dev
+    container_name: test-nitro_server-dev
     command: npm start
     ports:
     - 8081:8081
