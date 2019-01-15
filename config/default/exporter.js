@@ -63,7 +63,7 @@ const config = {
 					],
 				},
 			],
-			views: true,
+			views: ['index', 'example-*', 'api/lottie/shipment.json', 'api/lottie/bouncing.json'],
 			zip: false,
 		},
 	],
