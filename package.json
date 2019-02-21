@@ -32,7 +32,7 @@
     "test": "npm-run-all test:*",
     "test:lint": "npm run lint",
     "test:karma": "karma start ./tests/karma/karma.conf.js",
-    "test:cypress": "npm-run-all --parallel --race test:cypress:*",
+    "test:cypress": "npm run build && npm-run-all --parallel --race test:cypress:*",
     "test:cypress:serve": "cross-env PORT=8888 npm run prod:serve",
     "test:cypress:test": "cypress run --project ./tests/cypress/",
     "visual-approve": "gulp visual-approve",
