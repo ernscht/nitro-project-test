@@ -1,4 +1,4 @@
 /* eslint-disable no-console */
-console.log('You are using nitro version 4.4.3');
-console.log('Look for updates on https://npmjs.com/package/generator-nitro');
+console.log('You are using nitro version 4.4.4');
+console.log('Check for updates on https://npmjs.com/package/generator-nitro');
 /* eslint-enable no-console */
