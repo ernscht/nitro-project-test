@@ -1,7 +1,7 @@
 {
   "name": "test-nitro",
   "version": "1.0.0",
-  "description": "Nitro is a Node.js application for simple and complex frontend development with a tiny footprint. This app is based on generator-nitro 4.7.5",
+  "description": "Nitro is a Node.js application for simple and complex frontend development with a tiny footprint. This app is based on generator-nitro 4.8.0",
   "license": "UNLICENSED",
   "private": true,
   "author": "The Nitro Team",
@@ -28,7 +28,7 @@
     "lint:js": "eslint ./src --ext .js",
     "lint:license": "license-checker --production --summary --exclude \"Apache-2.0, BSD, ISC, LGPL, MIT, MPL\" --failOn \"AGPL; EPL; GPL\"",
     "XXXlint:ts": "eslint ./src --ext .ts,.tsx --config .eslintrc-typescript.js",
-    "prettier": "prettier --write \"src/**/*.*(js|jsx|ts|tsx|json)\"",
+    "prettier": "prettier --write \"src/**/*.*(js|jsx|ts|tsx|json|md)\"",
     "test": "npm-run-all test:*",
     "test:lint": "npm run lint",
     "test:karma": "karma start ./tests/karma/karma.conf.js",
@@ -81,7 +81,7 @@
     "jquery": "3.4.1",
     "lazysizes": "5.1.0",
     "lodash": "4.17.11",
-    "lottie-web": "5.5.5",
+    "lottie-web": "5.5.6",
     "prevent-window-opener-attacks": "0.2.4",
     "svg4everybody": "2.1.9",
     "terrific": "3.0.0",
@@ -92,10 +92,10 @@
     "@namics/prettier-config": "0.2.0",
     "@namics/stylelint-config": "0.3.2",
     "@namics/ts-config": "0.3.0",
-    "@nitro/app": "4.7.5",
-    "@nitro/exporter": "4.7.5",
-    "@nitro/gulp": "4.7.5",
-    "@nitro/webpack": "4.7.5",
+    "@nitro/app": "4.8.0",
+    "@nitro/exporter": "4.8.0",
+    "@nitro/gulp": "4.8.0",
+    "@nitro/webpack": "4.8.0",
     "backstopjs": "4.1.9",
     "commitizen": "3.1.1",
     "config": "3.1.0",
@@ -105,10 +105,10 @@
     "eslint": "5.16.0",
     "eslint-plugin-import": "2.18.0",
     "extend": "3.0.2",
-    "generator-nitro": "4.7.5",
+    "generator-nitro": "4.8.0",
     "gulp": "3.9.1",
-    "gulp-load-plugins": "1.6.0",
-    "husky": "2.7.0",
+    "gulp-load-plugins": "2.0.0",
+    "husky": "3.0.0",
     "jasmine-core": "3.4.0",
     "karma": "4.1.0",
     "karma-chrome-launcher": "2.2.0",
@@ -116,14 +116,14 @@
     "karma-phantomjs-launcher": "1.0.4",
     "karma-webpack": "4.0.2",
     "license-checker": "25.0.1",
-    "lint-staged": "8.2.1",
+    "lint-staged": "9.1.0",
     "npm-run-all": "4.1.5",
-    "prettier": "1.15.2",
+    "prettier": "1.18.2",
     "rimraf": "2.6.3",
     "stylelint": "10.1.0",
-    "webpack": "4.35.0",
+    "webpack": "4.35.3",
     "webpack-cli": "3.3.5",
-    "yo": "2.0.6"
+    "yo": "3.1.0"
   },
   "browserslist": [
     "> 0.5%",
@@ -148,16 +148,23 @@
       "stylelint"
     ],
     "src/**/*.json": [
-      "prettier --list-different --write",
-      "npm run lint:data"
+      "prettier --write",
+      "npm run lint:data",
+      "git add"
     ],
     "src/**/*.{js,jsx}": [
-      "prettier --list-different --write",
-      "eslint"
+      "prettier --write",
+      "eslint",
+      "git add"
     ],
     "src/**/*.{ts,tsx}": [
-      "prettier --list-different --write",
-      "eslint --config .eslintrc-typescript.js"
+      "prettier --write",
+      "eslint --config .eslintrc-typescript.js",
+      "git add"
+    ],
+    "src/**/*.md": [
+      "prettier --write",
+      "git add"
     ]
   }
 }
