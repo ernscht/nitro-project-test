@@ -3,6 +3,8 @@ sudo: false
 node_js:
   - '8'
   - '10'
+services:
+  - docker
 env:
   - CI=true
 ## Cache NPM folder and Cypress binary
