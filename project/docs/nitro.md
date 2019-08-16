@@ -12,7 +12,7 @@ Nitro is simple, fast and flexible. Use this app for all your frontend work.
 -   Webpack Builder with HMR
 -   Gulp Tasks for additional functionality
 -   Linting, Source Maps, PostCSS & Browsersync
--   Setup for unit, e2e and visual regression testing (cypress, karma/jasmine, backstopjs)
+-   Setup for e2e and visual regression testing (cypress, backstopjs)
 -   Pattern generator
 -   [Client side templates](./client-templates.md)
 -   [Static Exports](./nitro-exporter.md)
@@ -500,4 +500,4 @@ Use or create new scripts in `package.json` to run with npm.
 
 ## Credits
 
-This app was generated with yeoman and the [generator-nitro](https://www.npmjs.com/package/generator-nitro) package (version 4.8.3).
+This app was generated with yeoman and the [generator-nitro](https://www.npmjs.com/package/generator-nitro) package (version 4.9.0).
