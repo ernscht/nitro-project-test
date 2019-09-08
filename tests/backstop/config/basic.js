@@ -1,7 +1,7 @@
 'use strict';
 
 const port = process.env.PORT || '8889';
-const hostName = process.env.HOST_NAME || 'http://host.docker.internal';
+const hostName = process.env.HOST_NAME || 'http://localhost';
 const host = `${hostName}:${port}`;
 const viewports = [
 	{
