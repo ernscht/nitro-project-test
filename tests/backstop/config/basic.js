@@ -3,6 +3,8 @@
 const port = process.env.PORT || '8889';
 const hostName = process.env.CI ? 'http://localhost' : 'http://host.docker.internal';
 const host = `${hostName}:${port}`;
+console.log(`backstop test host: ${host}`);
+console.log(process.env);
 const viewports = [
 	{
 		label: 'phone',
