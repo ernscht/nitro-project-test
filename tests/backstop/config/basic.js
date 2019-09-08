@@ -48,7 +48,7 @@ module.exports = {
 		debug: false,
 		debugWindow: false,
 		dockerCommandTemplate:
-			'docker run --rm -it --mount type=bind,source="{cwd}",target=/src backstopjs/backstopjs:{version} {backstopCommand} {args}',
+			'docker run --rm -i --mount type=bind,source="{cwd}",target=/src --network host backstopjs/backstopjs:{version} {backstopCommand} {args}',
 	},
 	baseScenario: {
 		// cookiePath: 'tests/backstop/engine_scripts/cookies.json',
