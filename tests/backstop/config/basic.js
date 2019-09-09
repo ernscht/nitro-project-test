@@ -1,7 +1,10 @@
 'use strict';
 
+function getHostName() {
+	return process.platform === 'win32' || process.platform === 'darwin' ? 'http://host.docker.internal' : 'http://localhost';
+}
 const port = process.env.PORT || '8889';
-const hostName = process.env.HOSTNAME && process.env.HOSTNAME.startsWith('travis-job-') ? 'http://localhost' : 'http://host.docker.internal';
+const hostName = process.env.HOSTNAME || getHostName();
 const host = `${hostName}:${port}`;
 console.log(`backstop test host: ${host}`);
 const viewports = [
@@ -49,7 +52,7 @@ module.exports = {
 		debug: false,
 		debugWindow: false,
 		dockerCommandTemplate:
-			'docker run --rm -i --mount type=bind,source="{cwd}",target=/src --network host backstopjs/backstopjs:{version} {backstopCommand} {args}',
+			`docker run --rm -i -e HOSTNAME=${hostName} --mount type=bind,source="{cwd}",target=/src --network host backstopjs/backstopjs:{version} {backstopCommand} {args}`,
 	},
 	baseScenario: {
 		// cookiePath: 'tests/backstop/engine_scripts/cookies.json',
