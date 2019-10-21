@@ -291,9 +291,7 @@ Using a placeholder is another way to output some markup. Placeholders are place
 The following example renders the file `content/example.hbs` from `/src/views/_placeholders/`.
 
 ```
-
 {{placeholder name='content' template='example'}}
-
 ```
 
 ### Render page lists
@@ -306,25 +304,19 @@ containing links to the respective pages.
 With parameter include, all views containing at least one of the terms in their path will be displayed
 
 ```
-
 {{viewlist include="<term-1>,<term-2>"}}
-
 ```
 
 With parameter exclude, all views containing none of the terms will be displayed
 
 ```
-
 {{viewlist exclude="<term-1>,<term-2>"}}
-
 ```
 
 With parameter include and exclude combined, all views containing at least one of the terms but none of the excluded ones will be displayed
 
 ```
-
 {{viewlist include="<term-1>" exclude="<term-2>"}}
-
 ```
 
 ### Passing data
@@ -358,20 +350,20 @@ If you need a different layout for a page, do so in the corresponding view data 
 (View data files needs to be placed in same directory structure than views)
 
 ```
-    /src/views/_data/index.json
-    {
-        "_layout": "home"
-    }
+# /src/views/_data/index.json
+{
+    "_layout": "home"
+}
 
-    /src/views/_layouts/home.hbs
-    http://localhost:8080/index
+# /src/views/_layouts/home.hbs
+http://localhost:8080/index
 ```
 
 ...or you may change the layout temporarily by requesting a page with the query param `?_layout=...`
 
 ```
-/src/views/index.hbs
-/src/views/_layouts/home.hbs
+# /src/views/index.hbs
+# /src/views/_layouts/home.hbs
 http://localhost:8080/index?_layout=home
 ```
 
@@ -533,4 +525,4 @@ Use or create new scripts in `package.json` to run with npm.
 
 ## Credits
 
-This app was generated with yeoman and the [generator-nitro](https://www.npmjs.com/package/generator-nitro) package (version 4.13.5).
+This app was generated with yeoman and the [generator-nitro](https://www.npmjs.com/package/generator-nitro) package (version 4.14.0).

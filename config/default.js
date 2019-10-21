@@ -29,6 +29,7 @@ const defaultConfig = {
 	nitro: {
 		viewFileExtension: 'hbs',
 		templateEngine: 'hbs',
+		jsCompiler: 'js',
 		patterns: require('./default/patterns'),
 		mode: {
 			livereload: true,
