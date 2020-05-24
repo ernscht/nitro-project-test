@@ -22,7 +22,7 @@ async function getConfig() {
 					[
 						new PluginTerminal({
 							title: 'Development Mode',
-							cmd: 'npm run dev',
+							cmd: 'npm start',
 							dark: true,
 							autostart: false,
 						}),
@@ -62,7 +62,7 @@ async function getConfig() {
 							actions: [
 								{
 									type: 'link',
-									href: 'https://nitro-project-test.netlify.com/',
+									href: 'https://nitro-project-test.netlify.app/',
 									title: 'Proto Server',
 								},
 							],
