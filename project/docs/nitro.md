@@ -205,9 +205,9 @@ Different layouts are placed in `/src/views/_layouts/`. Link them to your view [
 
 ### Render patterns
 
-Pages are meant to be compositions of your patterns. Use the pattern's name as the first parameter. Be aware, the
-pattern name is case-sensitive and should be unique.
+Pages are meant to be compositions of your patterns. Use the pattern's name as the first parameter. 
 
+Be aware, the pattern name is case-sensitive and should be unique (at least per pattern type, see more on that below).
 Nitro uses [handlebars](https://www.npmjs.com/package/hbs) as the view engine and provides custom helpers.
 
 Render the example pattern (file: `example.hbs`, data-file: `example.json`):
@@ -234,6 +234,16 @@ There also is a possibility to pass data to subpatterns by providing a data obje
 ```
 {{pattern name='example' data='example-variant' template='example-2'}}
 ```
+
+By using the `type` parameter, you can restrict the search for a pattern to a specific pattern type (atoms / molecules / ect).
+This is useful, when you e.g. have a cms pattern called `accordion`, which then calls an organism also called `accordion`:
+
+```
+{{pattern name='example' type='organism'}}
+```
+
+If no `type` parameter is provided and multiple pattern with the same name and different pattern types exist, 
+the pattern helper searches within all pattern types and returns the first pattern found (in alphabetical order).
 
 To be more flexible, you may also pass additional arguments to the pattern, which overrides the defaults from the data-file.
 
@@ -272,6 +282,11 @@ The pattern helper will find also pattern elements.
 
 -   Pattern with name `example-sub`: `<type>/example-sub/example-sub.hbs`
 -   Element with name `example-sub`: `<type>/*/elements/example-sub/example-sub.hbs`
+
+Please note:
+The parameter `type` is also available for rendering pattern elements the same as for normal patterns. Therefore, the same
+rules and restrictions regarding unique names apply. Additionally, for pattern elements, their name should also be unique
+within a certain pattern type as otherwise, the pattern helper would just return the first found match.
 
 ### Render partials
 
@@ -552,4 +567,4 @@ Use or create new scripts in `package.json` to run with npm.
 
 ## Credits
 
-This app was generated with yeoman and the [generator-nitro](https://www.npmjs.com/package/generator-nitro) package (version 5.6.12).
+This app was generated with yeoman and the [generator-nitro](https://www.npmjs.com/package/generator-nitro) package (version 5.7.0).
