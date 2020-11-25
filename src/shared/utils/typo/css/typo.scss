@@ -1,178 +1,148 @@
 @import '../../breakpoints/css/breakpoints';
 
-$typography-default-family: 'minion';
-$typography-default-size: 'm';
-$typography-default-style: null;
+$typography-family-sans: 'Arial', sans-serif;
+$typography-family-serif: 'Times New Roman', serif;
 
-$typography-normal-ascender: 0.225rem;
+$typography-weight-bold: 700;
+$typography-style-italic: italic;
 
-$typography-definition-mobile: (
-	sans: (
-		s: (
-			'font-size': 17px,
-			'line-height': 24px,
-			'letter-spacing': 0.3px
+$typography-definitions: (
+	default: (
+		base: (
+			'font-size': 1.6rem,
+			'line-height': 1,
+			'font-family': $typography-family-sans,
+			'font-weight': 400,
+			'font-style': normal,
 		),
-		m: (
-			'font-size': 18px,
-			'line-height': 24px,
-			'letter-spacing': 0.3px
-		),
-		l: (
-			'font-size': 22px,
-			'line-height': 28px,
-			'letter-spacing': 0.3px
-		),
-		xl: (
-			'font-size': 22px,
-			'line-height': 28px,
-			'letter-spacing': 0.3px
-		),
-		xxl: (
-			'font-size': 26px,
-			'line-height': 32px,
-			'letter-spacing': 0.3px
-		),
-		xxxl: (
-			'font-size': 32px,
-			'line-height': 40px,
-			'letter-spacing': 0.5px
-		)
 	),
-	serif: (
-		s: (
-			'font-size': 14px,
-			'line-height': 20px,
-			'letter-spacing': 0.3px
+	body: (
+		all: (
+			'font-family': $typography-family-sans,
 		),
-		m: (
+		mobile: (
 			'font-size': 16px,
 			'line-height': 24px,
 			'letter-spacing': 0.3px
 		),
-	)
-);
-
-$typography-definition-desktop: (
-	sans: (
-		s: (
-			'font-size': 21px,
+		desktop: (
+			'font-size': 24px,
 			'line-height': 32px,
 			'letter-spacing': 0.75px
-		),
-		m: (
-			'font-size': 22px,
-			'line-height': 32px,
-			'letter-spacing': 0.5px
-		),
-		l: (
-			'font-size': 26px,
-			'line-height': 32px,
-			'letter-spacing': 0.5px
-		),
-		xl: (
-			'font-size': 26px,
-			'line-height': 36px,
-			'letter-spacing': 0.5px
-		),
-		xxl: (
-			'font-size': 34px,
-			'line-height': 44px,
-			'letter-spacing': 0.5px
-		),
-		xxxl: (
-			'font-size': 50px,
-			'line-height': 64px,
-			'letter-spacing': 1px
 		)
 	),
-	serif: (
-		s: (
-			'font-size': 14px,
-			'line-height': 20px,
-			'letter-spacing': 0.3px
+	body-small: (
+		all: (
+			'font-family': $typography-family-sans,
 		),
-		m: (
-			'font-size': 16px,
+		mobile: (
+			'font-size': 12px,
 			'line-height': 24px,
 			'letter-spacing': 0.3px
+		),
+		desktop: (
+			'font-size': 18px,
+			'line-height': 32px,
+			'letter-spacing': 0.75px
 		)
-	)
+	),
+	h1: (
+		all: (
+			'font-family': $typography-family-serif,
+			'font-font-weight': $typography-weight-bold,
+		),
+		mobile: (
+			'font-size': 32px,
+			'line-height': 44px,
+			'letter-spacing': 0.3px
+		),
+		desktop: (
+			'font-size': 44px,
+			'line-height': 56px,
+			'letter-spacing': 0.3px
+		)
+	),
+	h2: (
+		all: (
+			'font-family': $typography-family-serif,
+			'font-style': $typography-style-italic,
+		),
+		mobile: (
+			'font-size': 24px,
+			'line-height': 32px,
+			'letter-spacing': 0.3px
+		),
+		desktop: (
+			'font-size': 32px,
+			'line-height': 44px,
+			'letter-spacing': 0.3px
+		)
+	),
+	button: (
+		all: (
+			'font-family': $typography-family-serif,
+		),
+		mobile: (
+			'font-size': 18px,
+			'line-height': 18px,
+			'letter-spacing': 0.3px
+		),
+		desktop: (
+			'font-size': 20px,
+			'line-height': 20px,
+			'letter-spacing': 0.3px
+		)
+	),
 );
 
-/*
-	Functions to get the definition
-*/
+// Output generation for font-size definition
+@mixin _generate-font-size($font-size-definition) {
+	font-size: map-get($font-size-definition, 'font-size');
+	line-height: map-get($font-size-definition, 'line-height');
 
-@function typography-get-definition($breakpoint) {
-	@if ($breakpoint == 'mobile') {
-		@return $typography-definition-mobile;
+	@if (map-has-key($font-size-definition, 'font-family')) {
+		font-family: map-get($font-size-definition, 'font-family');
 	}
-	@if ($breakpoint == 'desktop') {
-		@return $typography-definition-desktop;
+	@if (map-has-key($font-size-definition, 'font-weight')) {
+		font-weight: map-get($font-size-definition, 'font-weight');
 	}
-	@warn 'Unknown typography breakpoint '#{$breakpoint}'.';
-}
-
-@function typography-get-font-definition($breakpoint, $size, $family) {
-	$typography-breakpoint: typography-get-definition($breakpoint);
-	$typography-family: map-get($typography-breakpoint, $family);
-	@if ($typography-family == null) {
-		@warn 'Unknown typography definition for breakpoint '#{$breakpoint}' and family '#{$family}'.';
+	@if (map-has-key($font-size-definition, 'font-style')) {
+		font-style: map-get($font-size-definition, 'font-style');
 	}
-	$typography-font-definition: map-get($typography-family, $size);
-	@if ($typography-font-definition == null) {
-		@warn 'Unknown typography definition for breakpoint '#{$breakpoint}', family '#{$family}' and size #{$size}.';
+	@if (map-has-key($font-size-definition, 'letter-spacing')) {
+		letter-spacing: map-get($font-size-definition, 'letter-spacing');
 	}
-	@return $typography-font-definition;
-}
-
-@mixin getDefinition($font-definition, $style, $family) {
-	font-size: map-get($font-definition, 'font-size');
-	line-height: map-get($font-definition, 'line-height');
-	letter-spacing: map-get($font-definition, 'letter-spacing');
-
-	@if($family == 'sans') {
-		font-family: Arial, sans-serif;
-
-		@if ($style == 'bold') {
-			font-family: Arial, sans-serif;
-			font-weight: bold;
-		}
-		@if ($style == 'italic') {
-			font-family: Arial, sans-serif;
-			font-style: italic;
-		}
-	}
-	@if($family == 'serif') {
-		font-family: Arial, sans-serif;
-
-		@if ($style == 'serif') {
-			font-family: Arial, sans-serif;
-		}
-		@if ($style == 'semi-bold') {
-			font-family: Arial, sans-serif;
-		}
+	@if (map-has-key($font-size-definition, 'text-transform')) {
+		text-transform: map-get($font-size-definition, 'text-transform');
 	}
 }
 
-/*
-	mixin to use in the code
+// Return the font definition for the given viewport and font-name
+@function get-font-definition($font-bundle, $viewport) {
+	@if (not(map-has-key($typography-definitions, $font-bundle))) {
+		@error 'Typography font name `#{$font-bundle}` does not exist.';
+	} @else if (not(map-has-key(map-get($typography-definitions, $font-bundle), $viewport))) {
+		@error 'Typography viewport size `#{$viewport}` does not exist for font `#{$font-bundle}`.';
+	}
 
-	Params:
-		- $size: gets the typo definition according to the size (e.g. s, m, l)
-		- $style: defines the style of the font. Accepted Values are 'bold', 'italic', 'semi-bold'. Default is null
-		- $family: defines the family of the language. Currently is minion default.
-		- $margin-bottom: adds a calculated margin at the bottom.
-*/
+	$all-font-definition: ();
+	@if (map-has-key(map-get($typography-definitions, $font-bundle), 'all')) {
+		$all-font-definition: map-get(map-get($typography-definitions, $font-bundle), 'all');
+	}
+	$font-definition: map-merge($all-font-definition, map-get(map-get($typography-definitions, $font-bundle), $viewport));
 
-@mixin typography($size: $typography-default-size, $style: $typography-default-style, $family: $typography-default-family, $margin-bottom: 0) {
+	@return $font-definition;
+}
 
-	$font-definition: typography-get-font-definition('mobile', $size, $family);
-	@include getDefinition($font-definition, $style, $family);
+// Render a set of typography styles for one or all defined viewports
+@mixin typography($font-bundle, $viewport: 'all') {
+	@if ($viewport == 'all') {
+		@include _generate-font-size(get-font-definition($font-bundle: $font-bundle, $viewport: 'mobile'));
 
-	@media screen and (min-width: $size-md-min) {
-		$font-definition: typography-get-font-definition('desktop', $size, $family);
-		@include getDefinition($font-definition, $style, $family);
+		@media (min-width: $size-md-min) {
+			@include _generate-font-size(get-font-definition($font-bundle: $font-bundle, $viewport: 'desktop'));
+		}
+	} @else {
+		@include _generate-font-size(get-font-definition($font-bundle: $font-bundle, $viewport: $viewport));
 	}
 }
