@@ -6,4 +6,4 @@ services:
     container_name: test-nitro_server
     command: npm run prod
     ports:
-    - 8080:8080
+      - 8080:8080

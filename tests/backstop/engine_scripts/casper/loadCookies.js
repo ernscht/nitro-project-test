@@ -1,6 +1,6 @@
 var fs = require('fs');
 
-module.exports = function(casper, scenario) {
+module.exports = function (casper, scenario) {
 	var cookies = [];
 	var cookiePath = scenario.cookiePath;
 

@@ -1,4 +1,4 @@
-module.exports = function(chromy, scenario) {
+module.exports = function (chromy, scenario) {
 	var hoverSelector = scenario.hoverSelectors || scenario.hoverSelector;
 	var clickSelector = scenario.clickSelectors || scenario.clickSelector;
 	var scrollToSelector = scenario.scrollToSelectors || scenario.scrollToSelector;
@@ -8,7 +8,7 @@ module.exports = function(chromy, scenario) {
 		chromy
 			.wait(hoverSelector)
 			.rect(hoverSelector)
-			.result(function(rect) {
+			.result(function (rect) {
 				chromy.mouseMoved(rect.left, rect.top);
 			});
 	}
@@ -25,7 +25,7 @@ module.exports = function(chromy, scenario) {
 		chromy
 			.wait(scrollToSelector)
 			.evaluate(`window._scrollToSelector = '${scrollToSelector}'`)
-			.evaluate(function() {
+			.evaluate(function () {
 				document.querySelector(window._scrollToSelector).scrollIntoView();
 			});
 	}

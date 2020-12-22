@@ -11,7 +11,7 @@ module.exports = (chromy, scenario) => {
 			.wait(hoverSelector)
 			.wait(1000)
 			.rect(hoverSelector)
-			.result(function(rect) {
+			.result(function (rect) {
 				chromy.mouseMoved(rect.left, rect.top);
 			});
 	}
