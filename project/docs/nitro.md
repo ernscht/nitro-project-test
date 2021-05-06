@@ -571,9 +571,9 @@ Use or create new scripts in `package.json` to run with npm.
 
 ## Contributing
 
-- For bugs and features please use [GitHub Issues](https://github.com/namics/generator-nitro/issues)
+- For bugs and features please use [GitHub Issues](https://github.com/merkle-open/generator-nitro/issues)
 - Feel free to fork and send PRs to the current `develop` branch. That's a good way to discuss your ideas.
 
 ## Credits
 
-This app was generated with yeoman and the [generator-nitro](https://www.npmjs.com/package/generator-nitro) package (version 5.10.2).
+This app was generated with yeoman and the [generator-nitro](https://www.npmjs.com/package/generator-nitro) package (version 5.10.3).
