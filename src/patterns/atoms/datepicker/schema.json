@@ -1,6 +1,7 @@
 {
-	"$schema": "http://json-schema.org/schema#",
-	"title": "date",
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "/atoms/datepicker",
+	"title": "datepicker",
 	"description": "A date atom",
 	"type": "object",
 	"properties": {
