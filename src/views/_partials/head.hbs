@@ -13,6 +13,8 @@
 <meta name="theme-color" content="#ffffff">
 <title>{{_nitro.pageTitle}}</title>
 
+{{!-- three variants of hashed asset helper --}}
+<link rel="preload" href="{{asset name='/media/fonts/gaegu-v2-latin-regular.woff2' hashed=true}}" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{{asset-hashed name='/media/fonts/gaegu-v2-latin-regular.woff2'}}" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{{asset name=(assetHashed name='/media/fonts/playfair-display-v13-latin-regular.woff2')}}" as="font" type="font/woff2" crossorigin>
 
