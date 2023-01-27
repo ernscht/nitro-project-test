@@ -26,7 +26,7 @@ Nitro is currently tested with the LTS maintenance versions (release 16.x and 14
 Install the project dependencies in the project root:
 
 ```
-npm install
+npm ci
 ```
 
 On Mac you need to make sure that githooks are executable, e.g.
@@ -580,4 +580,4 @@ Use or create new scripts in `package.json` to run with npm.
 
 ## Credits
 
-This app was generated with yeoman and the [generator-nitro](https://www.npmjs.com/package/generator-nitro) package (version 7.2.3).
+This app was generated with yeoman and the [generator-nitro](https://www.npmjs.com/package/generator-nitro) package (version 7.2.4).
