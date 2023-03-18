@@ -4,18 +4,15 @@
 name: ci
 on:
   push:
-    branches:
-      - master
+    branches: [main, master]
   pull_request:
-    branches:
-      - master
-
+    branches: [main, master]
 jobs:
   test:
     name: Test - ${{ matrix.platform }} - Node v${{ matrix.node-version }}
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [16.x, 18.x]
         platform: [ubuntu-latest, windows-latest, macos-latest]
     runs-on: ${{ matrix.platform }}
     steps:
@@ -33,3 +30,9 @@ jobs:
         run: npm test
         env:
           CI: true
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: reports ${{ matrix.platform }} ${{ matrix.node-version }}
+          path: public/reports/
+          retention-days: 30
