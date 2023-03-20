@@ -42,7 +42,7 @@
     "test:e2e": "cross-env PORT=8899 NITRO_MODE=test npm-run-all --parallel --race test:e2e:*",
     "test:e2e:serve": "npm run prod:serve",
     "test:e2e:start": "npm-run-all --serial test:e2e:start:*",
-    "xtest:e2e:start:cypress": "cypress run --project ./tests/cypress/",
+    "test:e2e:start:cypress": "cypress run --project ./tests/cypress/",
     "test:e2e:start:playwright": "playwright test --config=tests/playwright/playwright.config.ts",
     "xtest:e2e:start:lighthouse": "lighthouse http://localhost:8899/example-patterns --quiet --configPath=./tests/lighthouse/lighthouse.config.js --output-path=./public/reports/lighthouse/report.html",
     "visual-approve": "backstop approve --config=tests/backstop/backstop.config.js --docker",
