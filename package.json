@@ -44,7 +44,6 @@
     "test:e2e:start": "npm-run-all --serial test:e2e:start:*",
     "test:e2e:start:cypress": "cypress run --project ./tests/cypress/",
     "test:e2e:start:playwright": "playwright test --config=tests/playwright/playwright.config.ts",
-    "test:e2e:start:lighthouse": "lighthouse http://localhost:8899/example-patterns --quiet --configPath=./tests/lighthouse/lighthouse.config.js --output-path=./public/reports/lighthouse/report.html",
     "visual-approve": "backstop approve --config=tests/backstop/backstop.config.js --docker",
     "visual-test": "npm run build && cross-env PORT=8889 npm-run-all --parallel --race visual-test:*",
     "visual-test:serve": "npm run prod:serve",
