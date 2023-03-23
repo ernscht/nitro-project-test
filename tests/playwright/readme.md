@@ -1,4 +1,4 @@
-# PLaywright e2e Tests
+# Playwright e2e Tests
 
 End to end testing with playwright.
 
