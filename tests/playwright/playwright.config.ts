@@ -103,6 +103,6 @@ export default defineConfig({
 	webServer: {
 		command: 'npm run prod:serve',
 		port: Number(port),
-		reuseExistingServer: !process.env.CI,
+		reuseExistingServer: true,
 	},
 });
