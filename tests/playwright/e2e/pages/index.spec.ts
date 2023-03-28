@@ -23,24 +23,20 @@ test.describe('Index Page', () => {
 	});
 
 	test.describe('HTML Head', () => {
-		test('Character encoding is UTF-8', async ({page}) => {
+		test('Character encoding is UTF-8', async ({ page }) => {
 			const charset = await page.evaluate(() => window.document.characterSet);
 			expect(charset).toEqual('UTF-8');
 		});
 
-		test('Title includes index page', async ({page}) => {
+		test('Title includes index page', async ({ page }) => {
 			await expect(page).toHaveTitle(/index page/);
 		});
 	});
 
 	test.describe('Root DOM node', () => {
-		test('Has correct lang attribute', async ({page}) => {
+		test('Has correct lang attribute', async ({ page }) => {
 			const lang = await page.locator('html').getAttribute('lang');
 			expect(lang).toEqual('en');
 		});
 	});
 });
-
-
-
-
