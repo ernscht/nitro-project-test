@@ -22,7 +22,7 @@ Nitro is simple, fast and flexible. Use this app for all your frontend work.
 This application was created by the yeoman generator for nitro.  
 Before using, you need of course [node](https://nodejs.org/) installed.  
 Nitro is tested with the current ["Active" LTS version](https://github.com/nodejs/Release#release-schedule)
-and with the LTS maintenance versions (release 16.x and 14.x).
+and with the LTS maintenance versions.
 
 Install the project dependencies in the project root:
 
@@ -71,10 +71,6 @@ This works a bit different on **Windows**. Use the following commands in prompt:
 set PORT=8000 && set PROXY=8001 && npm start
 set PORT=3001 && npm run prod
 ```
-
-### Usage with docker
-
-For information on how to use Nitro with docker, please refer to [nitro-docker.md](./nitro-docker.md).
 
 ## Configuring
 
@@ -581,4 +577,4 @@ Use or create new scripts in `package.json` to run with npm.
 
 ## Credits
 
-This app was generated with yeoman and the [generator-nitro](https://www.npmjs.com/package/generator-nitro) package (version 7.5.4).
+This app was generated with yeoman and the [generator-nitro](https://www.npmjs.com/package/generator-nitro) package (version 8.0.0).
