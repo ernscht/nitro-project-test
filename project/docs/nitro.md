@@ -30,12 +30,6 @@ Install the project dependencies in the project root:
 npm ci
 ```
 
-On Mac you need to make sure that githooks are executable, e.g.
-
-```
-chmod +x .husky/pre-commit
-```
-
 ## Starting the app
 
 Use
@@ -577,4 +571,4 @@ Use or create new scripts in `package.json` to run with npm.
 
 ## Credits
 
-This app was generated with yeoman and the [generator-nitro](https://www.npmjs.com/package/generator-nitro) package (version 9.0.3).
+This app was generated with yeoman and the [generator-nitro](https://www.npmjs.com/package/generator-nitro) package (version 9.1.0).
