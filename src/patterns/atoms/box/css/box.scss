@@ -21,6 +21,10 @@
 		border-left: 2rem solid transparent;
 		border-right: 2rem solid $color-gray-8;
 	}
+
+	a {
+		padding: 0.5em 0;
+	}
 }
 
 // inline mixin examples
