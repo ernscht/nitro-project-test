@@ -416,7 +416,7 @@ For final use, all assets are copied from the 'src' to the 'public' folder.
 The main assets will be bundled with an easy to use webpack config.
 
 The configuration includes loaders for JavaScript, TypeScript, CSS & SCSS,
-clientside handlebars, webfonts and images (with minification). It also includes an iconfont generator.
+clientside handlebars, webfonts and images (with minification).
 
 You only have to enable the desired loaders and features. And of course, it is possible to extend the configuration to your needs.
 
@@ -571,4 +571,4 @@ Use or create new scripts in `package.json` to run with npm.
 
 ## Credits
 
-This app was generated with yeoman and the [generator-nitro](https://www.npmjs.com/package/generator-nitro) package (version 9.4.2).
+This app was generated with yeoman and the [generator-nitro](https://www.npmjs.com/package/generator-nitro) package (version 9.5.0).
