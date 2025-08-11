@@ -21,8 +21,7 @@ Nitro is simple, fast and flexible. Use this app for all your frontend work.
 
 This application was created by the yeoman generator for nitro.  
 Before using, you need of course [node](https://nodejs.org/) installed.  
-Nitro is tested with the current ["Active" LTS version](https://github.com/nodejs/Release#release-schedule)
-and with the LTS maintenance versions.
+Nitro is currently only tested with node 20.
 
 Install the project dependencies in the project root:
 
@@ -571,4 +570,4 @@ Use or create new scripts in `package.json` to run with npm.
 
 ## Credits
 
-This app was generated with yeoman and the [generator-nitro](https://www.npmjs.com/package/generator-nitro) package (version 9.5.0).
+This app was generated with yeoman and the [generator-nitro](https://www.npmjs.com/package/generator-nitro) package (version 10.0.0).
