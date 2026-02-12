@@ -1,8 +1,12 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "/atoms/stage",
+	"$id": "/atom/stage",
 	"title": "stage",
 	"description": "A stage atom",
 	"type": "object",
-	"properties": {}
+	"properties": {
+		"heading": {
+			"$ref": "/atom/heading"
+		}
+	}
 }

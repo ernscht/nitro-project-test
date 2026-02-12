@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "/atoms/heading",
+	"$id": "/atom/heading",
 	"title": "heading",
 	"description": "A heading atom",
 	"type": "object",
@@ -9,12 +9,12 @@
 			"description": "Heading level",
 			"enum": ["h1", "h2", "h3"]
 		},
-		"title": {
+		"titleText": {
 			"type": "string"
 		},
 		"subTitle": {
 			"type": "string"
 		}
 	},
-	"required": ["title"]
+	"required": ["titleTag", "titleText"]
 }

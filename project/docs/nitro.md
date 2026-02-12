@@ -21,7 +21,7 @@ Nitro is simple, fast and flexible. Use this app for all your frontend work.
 
 This application was created by the yeoman generator for nitro.  
 Before using, you need of course [node](https://nodejs.org/) installed.  
-Nitro is currently only tested with node 20.
+Nitro is currently tested with the node LTS versions 22 and 24.
 
 Install the project dependencies in the project root:
 
@@ -404,7 +404,6 @@ By default Nitro provides some data to be used in your views:
 - `{{ _nitro.pageTitle }}` (String) outputs string generated from the view name by default
 - `{{#if _nitro.production}}{{/if}}` (Boolean) is true when environment variable `NODE_ENV` is set to `production`
 - `{{#if _nitro.test}}{{/if}}` (Boolean) is true when environment variable `NITRO_MODE` ist set to `test`
-- `{{#if _nitro.offline}}{{/if}}` (Boolean) is true when config param 'nitro.mode.offline' is true
 
 ## Assets
 
@@ -570,4 +569,4 @@ Use or create new scripts in `package.json` to run with npm.
 
 ## Credits
 
-This app was generated with yeoman and the [generator-nitro](https://www.npmjs.com/package/generator-nitro) package (version 10.0.4).
+This app was generated with yeoman and the [generator-nitro](https://www.npmjs.com/package/generator-nitro) package (version 11.0.0-beta.1).

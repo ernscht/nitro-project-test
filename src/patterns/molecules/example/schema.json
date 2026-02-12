@@ -1,13 +1,13 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "/molecules/example",
+	"$id": "/molecule/example",
 	"title": "Example",
 	"description": "An Example molecule",
 	"type": "object",
 	"properties": {
 		"modifier": {
 			"description": "A pattern modifier",
-			"enum": ["", "blue"]
+			"enum": ["", "highlight"]
 		},
 		"title": {
 			"description": "Title of the pattern",

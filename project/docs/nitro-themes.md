@@ -1,5 +1,7 @@
 # Nitro Themes
 
+TODO
+
 Nitro offers extensive configuration possibilities and features for the development
 of different themes/skins (or whatever you would name them).
 
@@ -75,8 +77,7 @@ They will be available in your views.
 
 ### Webpack Configuration
 
-Configure 'options.features.theme' and `options.features.dynamicAlias` in your
-[webpack configuration](./nitro-webpack.md) to enable themes functionality.
+Configure 'options.features.theme' in your [webpack configuration](./nitro-webpack.md) to enable themes functionality.
 
 And add an entry file per theme in the src folder ('ui.<theme-id>.js|ts')
 
