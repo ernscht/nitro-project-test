@@ -116,13 +116,20 @@ The millisecond 'delay' between a file change and task execution.
 The express server runs on this port.  
 An environment variable PORT will overwrite this property.
 
-#### Example config for http proxy (default)
+#### Example config
 
-```js
+```
 server: {
-    port: 8080,
+  port: 8080,
 }
 ```
+
+### `server.host`
+
+- Type: String
+- Default: 'localhost'
+
+Defines a custom host.
 
 ### `server.compression`
 

@@ -45,11 +45,11 @@ For production (prototype server) mode use:
 npm run prod
 ```
 
-The Nitro app will run on port `8080` by default, the proxy on `8081` (only runs in develpment mode).  
+The Nitro app will run on port `8080` by default.  
 If you want the app to run on another port use [config](./nitro-config.md) or add env vars to the tasks:
 
 ```
-PORT=8000 PROXY=8001 npm start
+PORT=8000 npm start
 ```
 
 The port to be used in production can be set the same way:
@@ -61,7 +61,7 @@ PORT=3000 npm run prod
 This works a bit different on **Windows**. Use the following commands in prompt:
 
 ```
-set PORT=8000 && set PROXY=8001 && npm start
+set PORT=8000 && npm start
 set PORT=3001 && npm run prod
 ```
 
@@ -569,4 +569,4 @@ Use or create new scripts in `package.json` to run with npm.
 
 ## Credits
 
-This app was generated with yeoman and the [generator-nitro](https://www.npmjs.com/package/generator-nitro) package (version 11.0.0-beta.1).
+This app was generated with yeoman and the [generator-nitro](https://www.npmjs.com/package/generator-nitro) package (version 11.0.0-beta.2).
