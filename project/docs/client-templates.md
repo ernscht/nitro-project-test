@@ -18,7 +18,7 @@ The following js code shows an example how to use a precompiled template.
 ```js
 const templateExample = require('../../template/example.hbs');
 const tplData = {
-  title: 'Client Side Rendered Example Module',
+    title: 'Client Side Rendered Example Module',
 }
 const pattern = templateExample(tplData);
 
