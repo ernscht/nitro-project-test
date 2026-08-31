@@ -26,8 +26,8 @@ const breakpointMarkup = [
 			'pointer-events:none',
 			'z-index:2147483646',
 			'opacity:0.8',
-			'background:rgba(200,200,200,0.9)',
-			'border:1px solid rgba(200,200,200,1)',
+			'background:rgba(200 200 200/0.9)',
+			'border:1px solid rgba(200 200 200/1)',
 		].join(';'),
 	);
 	document.body.appendChild(div);
@@ -37,8 +37,7 @@ const breakpointMarkup = [
 		setToLocalStorage('dev-helper-breakpoints', showEvents);
 	}
 
-	// 49 = keyCode for 1
-	addKeyboardAction(49, toggleBreakpointHelper);
+	addKeyboardAction('1', toggleBreakpointHelper);
 	// Local Storage
 	if (getFromLocalStorage('dev-helper-breakpoints')) {
 		toggleBreakpointHelper();

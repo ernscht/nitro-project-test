@@ -1,5 +1,3 @@
-'use strict';
-
 const cookieSession = require('cookie-session');
 const extend = require('extend');
 const utils = require('@nitro/app/app/lib/utils');
@@ -44,6 +42,6 @@ module.exports = (app) => {
 				}),
 			);
 		}
-		app.route('*').all(theme);
+		app.use(theme);
 	}
 };
